@@ -1,0 +1,26 @@
+<div class="grid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="centeredTitle"> <img src="../../images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+      </div>
+    </div>
+
+    <div class="alert alert-danger" ng-show="error">
+      <strong>Error!</strong> {{error}}
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="login">
+          <p>Buying and Selling QU Meal Plan Money Made Easy</p>
+          <form method="post">
+            <input type="text" name="u" placeholder="QU Email" required="required" ng-model="user.username"/>
+            <input type="password" name="p" placeholder="Password" required="required" ng-model="user.password"/>
+            <button type="submit" class="btn btn-primary btn-block btn-large" ng-click="logIn(user)">Log In.</button>
+          </form>
+          
+          <a id="registerLink" href="/#/signup" > Register New Account</a>
+        </div>
+      </div>
+    </div>
+</div><!--End of Grid-->

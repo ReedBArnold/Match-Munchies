@@ -1,0 +1,77 @@
+<div class="grid">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar transparent navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/#/user/overview">
+                <div>
+                  <img src="images/plate.png" width="20" height="20" id="title" alt="logo"> Match Munchies
+                </div>
+              </a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Profile</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/#/user/searchResults">
+              <div class="form-group">
+                <input type="text" placeholder="Search Friends" required="required"/>
+              </div>
+            </form>
+          </div>
+          <div><a class="logOut" id="reset" ng-click="logOut()">Log Out</a></div>
+        </nav>
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <ul class="nav nav-tabs nav-justified">
+            <li><a data-toggle="tab" href="/#/user/overview">Overview</a></li>
+            <li><a data-toggle="tab" href="/#/user/friends">Friends</a></li>
+            <li class="active"><a data-toggle="tab" href="/#/user/account">Account</a></li>
+          </ul>    
+            <div class="alert alert-success" ng-show="message">
+              <strong>Success!</strong> {{message}}
+            </div>
+
+            <div class="alert alert-danger" ng-show="error">
+              <strong>Error!</strong> {{error}}
+            </div>
+            <form method="post">
+            <div id="account" class="tab-pane fade in active">
+              <div class="top-space">
+                <div class="col-md-6">
+                  QU ID#:
+                  <input id="quIdInput" type="text" ng-model="new_data.qu_id" required="required" disabled />
+                  First Name:
+                  <input id="fnameInput" type="text" ng-model="new_data.first_name" required="required"/>
+                  Phone#:
+                  <input id="phoneInput" type="number" ng-model="new_data.phone" required="required"/>
+                  <!--Update Image:
+                  <input type='file'/>-->
+                  User Type (Seller or Buyer):
+                  <input id="userKindInput" type="text" ng-model="new_data.user_kind" required="required"/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                QU Email:
+                <input id="emailInput" type="text" ng-model="new_data.username" required="required" disabled />
+                Last Name:
+                <input id="lnameInput" type="text" ng-model="new_data.last_name" required="required"/>
+                New Password:
+                <input id="passInput" type="password" ng-model="new_data.pass"/>
+                Available Amount:
+                <input id="amountInput" type="number" ng-model="new_data.available_amount" required="required"/>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-primary btn-block btn-large" ng-click="updateInfo(new_data)">Update Account</button>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div><!--End of container-->
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+</div><!--End of Grid-->

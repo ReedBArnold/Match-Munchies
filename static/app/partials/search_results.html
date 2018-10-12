@@ -1,0 +1,72 @@
+  <div class="grid">
+<div class="row">
+      <div class="col-md-12">
+        <nav class="navbar transparent navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/#/user/overview">
+                <div>
+                  <img src="images/plate.png" width="20" height="20" id="title" alt="logo"> Match Munchies
+                </div>
+              </a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Profile</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/#/user/searchResults">
+              <div class="form-group">
+                <input type="text" placeholder="Search Friends" required="required"/>
+              </div>
+            </form>
+          </div>
+          <div><a class="logOut" id="reset" ng-click="logOut()">Log Out</a></div>
+        </nav>
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>User Type</th>
+                <th>Rating</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+                <td>Jane Smith</td>
+                <td>Seller</td>
+                <td>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                </td>
+                <td><button id="janeButton" type="submit" class="btn btn-primary btn-block btn-large" onclick="changeJane()">Add</button></td>     
+              </tr>
+              <tr>
+                <td><img src="images/placeholder.jpg" height="50" width="50" alt="placeholder"></td>
+                <td>John Smith</td>
+                <td>Buyer</td>
+                <td>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                </td>
+                <td><button id="johnButton" type="submit" class="btn btn-primary btn-block btn-large" onclick="changeJohn()">Add</button></td>
+              </tr>
+            </tbody>
+          </table> 
+        </div><!--End of container-->
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+  </div><!--End of Grid-->

@@ -1,0 +1,116 @@
+<div class="grid" ng-if="userInfo">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar transparent navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/#/user/overview">
+                <div>
+                  <img src="images/plate.png" width="20" height="20" id="title" alt="logo"> Match Munchies
+                </div>
+              </a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Profile</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="/#/user/searchResults">
+              <div class="form-group">
+                <input type="text" placeholder="Search Friends" required="required"/>
+              </div>
+            </form>
+          </div>
+          <div><a class="logOut" id="reset" ng-click="logOut()">Log Out</a></div>
+        </nav>
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a data-toggle="tab" href="/#/user/overview">Overview</a></li>
+            <li><a data-toggle="tab" href="/#/user/friends">Friends</a></li>
+            <li><a data-toggle="tab" href="/#/user/account">Account</a></li>
+          </ul>    
+
+          <div class="tab-content">
+            <div id="overview" class="tab-pane fade in active">
+              <div class="container-fluid">
+                <div class="col-md-2">
+                  <div class="top-space">
+                    <img src="images/placeholder.jpg" height="150" width="150" alt="placeholder">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="top-space">
+                    <h3 id="name">{{user.name}}<small style="color:white;"> {{user.username}}</small></h3>
+                    <b>QU ID#:</b> {{user.qu_id}} <br>
+                    <div id="phone"><b>Phone#:</b> {{user.phone}}</div>
+                    <div id="userType"><b>User Type:</b> {{user.user_kind}}</div>
+                    <div><b>Available Cash:</b> ${{user.available_amount}}</div>
+                    <div><b>Rewards:</b> {{user.rewards}}</div>
+                  </div>
+                </div>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Transaction Type</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Ratings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>Bought</td>
+                    <td>$400.00</td>
+                    <td>Completed</td>
+                    <td>04/25/16</td>
+                    <td>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>Bought</td>
+                    <td>$500.00</td>
+                    <td>Completed</td>
+                    <td>11/25/15</td>
+                    <td>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>Bought</td>
+                    <td>$300.00</td>
+                    <td>Completed</td>
+                    <td>04/01/15</td>
+                    <td>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star"></span>
+                      <span class="glyphicon glyphicon-star-empty"></span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div><!--End of container-->
+      </div><!--End of col-12-->
+    </div><!--End of row-->
+</div><!--End of Grid-->

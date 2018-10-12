@@ -1,0 +1,35 @@
+<div class="grid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="centeredTitle"> <img src="../../images/plate.png" width="75" height="75" id="title" alt="logo">Match Munchies</h1>
+      </div>
+    </div>
+
+  <div class="alert alert-success" ng-show="message">
+    <strong>Success!</strong> {{message}}
+  </div>
+
+  <div class="alert alert-danger" ng-show="error">
+    <strong>Error!</strong> {{error}}
+  </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="login">
+          <p>Fill out the fields below to register your New Account</p>
+          <form id="option">
+            <input id="fn" type="text" name="fn" placeholder="First Name" required="required" ng-model="new_user.first"/>
+            <input id="ln" type="text" name="ln" placeholder="Last Name" required="required" ng-model="new_user.last"/>
+            <!--<input type='file' id="imgInp"/>-->
+            
+            <input type="number" name="pn" placeholder="Phone Number" required="required" ng-model="new_user.phone"/>
+            <input type="number" name="quid" placeholder="QU ID" required="required" ng-model="new_user.qu_id"/>
+            <input type="text" name="email" placeholder="QU Email" required="required" ng-model="new_user.username"/>
+            <input type="password" name="p" placeholder="Password" required="required" ng-model="new_user.password"/>
+            <input type="password" name="cp" placeholder="Confirm Password" required="required" ng-model="new_user.password_confirm"/>
+            <button ng-click="register(new_user)" id="registerButton" type="submit" class="btn btn-primary btn-block btn-large">Register</button>
+          </form>     
+        </div>
+      </div><!--End of col-12-->
+    </div><!--End of Row-->
+</div><!--End of Grid-->
